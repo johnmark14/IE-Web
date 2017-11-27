@@ -2,11 +2,11 @@
  // [START signout]
  firebase.auth().signOut();
  // [END signout]
-
  var txtusername;
  var txtpassword;
 
  document.getElementById("btnsubmit").onclick = function() {
+     document.activeElement.blur();
      getData();
      checkuser();
  };
@@ -17,6 +17,7 @@
          txtusername = document.getElementById('username').value;
          txtpassword = document.getElementById('password').value;
          if (txtusername !== "" && txtpassword !== "") {
+             document.activeElement.blur();
              getData();
              checkuser();
          }
@@ -30,6 +31,7 @@
          txtusername = document.getElementById('username').value;
          txtpassword = document.getElementById('password').value;
          if (txtusername !== "" && txtpassword !== "") {
+             document.activeElement.blur();
              getData();
              checkuser();
          }
@@ -47,6 +49,7 @@
          window.alert("Please enter a value for username & password");
          return;
      } else {
+
          firebase.auth().signInWithEmailAndPassword(txtusername, txtpassword).catch(function(error) {
              // Handle Errors here.
              var errorCode = error.code;
