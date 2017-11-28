@@ -3,17 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- Google open sans fonts -->
+    <title>Dashboard</title>
+
+    <!-- Google open fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
     <link href="css/dashboardstyle.css" rel="stylesheet">
@@ -21,34 +24,58 @@
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js">
     </script>
-    <!-- Js script -->
+
+</head>
+<!-- navbar-inverse navbar-expand-lg navbar-dark bg-dark navbar-static-top justify-content-between -->
+
+<body>
+    <nav class="navbar navbar-expand-xl navbar-toggleable-xl navbar-dark bg-dark">
+        <div class="container">
+            <!-- Nav Brand -->
+            <a class="navbar-brand" href="#">
+                <img src="svg/logo.svg" alt="Logo" style="width:50px;"> InfoExtracT </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Nav Item -->
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav abs-center-x">
+                    <a class="nav-link active" href="#">Dashboard <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Features</a>
+                </div>
+
+                <!-- Email user -->
+                <div class="navbar-nav dropdown  ml-auto">
+
+                    <hr>
+                    <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="#"><img src="svg/user.svg" alt="Logo" style="width:40px;"> johmarkgabrentina@gmail.com</a>
+                    <div class="dropdown-menu" id="dropdown">
+                        <a class="dropdown-item" href="/">My Account</a>
+                        <a class="dropdown-item" href="/">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </nav>
+
+
+
+
+    <!-- Local Project Js script -->
     <script src="app.js"></script>
     </script>
     <script src="dashboard.js"></script>
     </script>
 
-    <title>Dashboard</title>
-</head>
 
-<body>
-    <h1 id="welcome"> </h1>
-
-
-
-
-
-
-
-
-
-
-    <!-- Bootstrap JQuery -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
 
 </html>
