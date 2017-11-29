@@ -27,3 +27,20 @@ hr {
 .navbar-brand {
     font-family: 'Ubuntu', sans-serif;
 }
+
+.main-button {
+    padding: 16px 0;
+}
+
+.main-button:hover {
+    cursor: pointer;
+    background: rgb(78, 84, 90);
+}
+
+.dropdown-item:active {
+    background: #FF9230;
+}
+
+#dashboard {
+    border-bottom: solid 4px #FF9230;
+}

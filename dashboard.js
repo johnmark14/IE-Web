@@ -1,3 +1,14 @@
+document.getElementById("logout").onclick = function() {
+    if (firebase.auth().currentUser) {
+        // [START signout]
+        firebase.auth().signOut();
+
+        var url = "index.html";
+        window.open(url, '_top');
+    }
+};
+
+
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         // User is signed in.
@@ -9,10 +20,9 @@ firebase.auth().onAuthStateChanged(function(user) {
         var uid = user.uid;
         var providerData = user.providerData;
         // ...
-
-        document.getElementById('welcome').innerHTML = email;
     } else {
-        // User is signed out.
-        // ...
+        window.alert("You are not signin!");
+        var url = "index.html";
+        window.open(url, '_top');
     }
 });
