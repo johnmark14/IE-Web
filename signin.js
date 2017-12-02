@@ -7,6 +7,7 @@
 
  document.getElementById("btnsubmit").onclick = function() {
      document.activeElement.blur();
+     progressBar(true);
      getData();
      checkuser();
  };
@@ -18,6 +19,7 @@
          txtpassword = document.getElementById('password').value;
          if (txtusername !== "" && txtpassword !== "") {
              document.activeElement.blur();
+             progressBar(true);
              getData();
              checkuser();
          }
@@ -32,6 +34,7 @@
          txtpassword = document.getElementById('password').value;
          if (txtusername !== "" && txtpassword !== "") {
              document.activeElement.blur();
+             progressBar(true);
              getData();
              checkuser();
          }
@@ -47,6 +50,7 @@
      // Quick validation
      if (txtusername == "" || txtpassword == "") {
          window.alert("Please enter a value for username & password");
+         progressBar(false);
          return;
      } else {
 
@@ -57,8 +61,10 @@
 
              if (errorCode === 'auth/wrong-password') {
                  window.alert("Wrong Email or Password");
+                 progressBar(false);
              } else {
                  window.alert(errorMessage);
+                 progressBar(false);
              }
              return;
          });
@@ -88,4 +94,16 @@
              // ...
          }
      });
+ }
+
+ function progressBar(bool) {
+     var progress = document.getElementById('logprogress');
+
+     if(bool) {
+         progress.style.display ='block';
+         
+     } else {
+        progress.style.display ='none';
+     }
+
  }

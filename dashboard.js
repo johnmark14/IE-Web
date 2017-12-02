@@ -1,6 +1,6 @@
 
 document.getElementById("logout").onclick = function() {
-    var checkUserLogout = confirm("Press a button!");
+    var checkUserLogout = confirm("Are you sure you want to logout?");
     if (checkUserLogout) {
         firebase.auth().signOut();
     }
